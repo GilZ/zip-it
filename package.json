@@ -1,0 +1,33 @@
+{
+  "name": "zip-it",
+  "version": "1.0.0",
+  "description": "A small library that helps you to verify postal (zip) codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -o zip-it.js && uglifyjs zip-it.js -c \"evaluate=false\" -m --source-map zip-it-min.map -o zip-it-min.js"
+  },
+  "keywords": [
+    "zip",
+    "zipcode",
+    "zipcodes",
+    "postal",
+    "codes",
+    "zip code",
+    "global",
+    "verify",
+    "verification"
+  ],
+  "author": "Gil Zieder",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GilZ/zip-it.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GilZ/zip-it/issues"
+  },
+  "homepage": "https://github.com/GilZ/zip-it#readme"
+}
