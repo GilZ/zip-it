@@ -1,236 +1,246 @@
+var all = /.*/,
+    twoDigits = /^\d{2}$/,
+    threeDigits = /^\d{3}$/,
+    fourDigits = /^\d{4}$/,
+    fiveDigits = /^\d{5}$/,
+    sixDigits = /^\d{6}$/,
+    threeAndTwoDigits = /^\d{3} \d{2}$/,
+    americanStyle = /^\d{5}(-\d{4})?$/,
+    jersey = /^GY\d{1,2} \d[A-Z]{2}$/;
+
 module.exports = {
     AD: /^AD\d{3}$/
-    , AE: /.*/
-    , AF: /^\d{4}$/
-    , AG: /.*/
+    , AE: all
+    , AF: fourDigits
+    , AG: all
     , AI: /^AI-2640$/
-    , AL: /^\d{4}$/
-    , AM: /^\d{4}$/
-    , AO: /.*/
+    , AL: fourDigits
+    , AM: fourDigits
+    , AO: all
     , AR: /^(\d{4})|([A-Z]\d{4}[A-Z]{4})$/ // Argentina has both new and old formats. This supports both.
     , AS: /^96799(-\d{4})?$/
-    , AT: /^\d{4}$/
-    , AU: /^\d{4}$/
-    , AW: /.*/
-    , AZ: /^\d{4}$/
-    , BA: /^\d{5}$/
+    , AT: fourDigits
+    , AU: fourDigits
+    , AW: all
+    , AZ: fourDigits
+    , BA: fiveDigits
     , BB: /^BB11000$/
-    , BD: /^\d{4}$/
-    , BE: /^\d{4}$/
-    , BF: /.*/
-    , BG: /^\d{4}$/
+    , BD: fourDigits
+    , BE: fourDigits
+    , BF: all
+    , BG: fourDigits
     , BH: /^\d{3,4}$/
-    , BI: /.*/
-    , BJ: /.*/
+    , BI: all
+    , BJ: all
     , BM: /^[A-Za-z]{2} \d{2}|[A-Za-z]{2}$/
     , BN: /^[A-Za-z]{2}\d{4}$/
-    , BO: /.*/
-    , BQ: /.*/
+    , BO: all
+    , BQ: all
     , BR: /^\d{5}-\d{3}$/
-    , BS: /.*/
-    , BT: /^\d{5}$/
-    , BW: /.*/
-    , BY: /^\d{6}$/
-    , BZ: /.*/
-    , CA: /^[A-CEGHJ-MPR-TV-Y]\d[A-CEGHJ-MPR-TV-Z]( |-)?\d[A-CEGHJ-MPR-TV-Z]\d$/ // But other than that, Canadian are really great people.
-    , CD: /.*/
-    , CF: /.*/
-    , CG: /.*/
-    , CH: /^\d{4}$/
-    , CI: /.*/
-    , CK: /.*/
+    , BS: all
+    , BT: fiveDigits
+    , BW: all
+    , BY: sixDigits
+    , BZ: all
+    , CA: /^[A-CEGHJ-MPR-TV-Y]\d[A-CEGHJ-MPR-TV-Z] |-\d[A-CEGHJ-MPR-TV-Z]\d$/ // But other than that, Canadian are really great people.
+    , CD: all
+    , CF: all
+    , CG: all
+    , CH: fourDigits
+    , CI: all
+    , CK: all
     , CL: /^\d{3}-?\d{4}$/
-    , CM: /.*/
-    , CN: /^\d{6}$/
-    , CO: /^\d{6}$/
-    , CR: /^\d{5}(-\d{4})?$/
+    , CM: all
+    , CN: sixDigits
+    , CO: sixDigits
+    , CR: americanStyle
     , CU: /.*|(^\d{5}$)/ // Cuba demands postal code only for mass mailing
-    , CV: /^\d{4}$/
-    , CW: /.*/
+    , CV: fourDigits
+    , CW: all
     , CY: /^\d{4}|(99\d{3})$/
-    , CZ: /^\d{3} \d{2}$/
-    , DE: /^\d{5}$/
-    , DJ: /.*/
-    , DK: /^\d{4}$/
-    , DM: /.*/
-    , DO: /^\d{5}$/
+    , CZ: threeAndTwoDigits
+    , DE: fiveDigits
+    , DJ: all
+    , DK: fourDigits
+    , DM: all
+    , DO: fiveDigits
     , DZ: /^[1-4]\d{4}$/
-    , EC: /^\d{6}$/
-    , EE: /^\d{5}$/
+    , EC: sixDigits
+    , EE: fiveDigits
     , EG: /^\d{4,5}$/
-    , EH: /.*/
-    , ER: /.*/
-    , ES: /^\d{5}$/
-    , ET: /^\d{4}$/
-    , FI: /^\d{5}$/
-    , FJ: /.*/
+    , EH: all
+    , ER: all
+    , ES: fiveDigits
+    , ET: fourDigits
+    , FI: fiveDigits
+    , FJ: all
     , FK: /^FIQQ 1ZZ$/
     , FM: /^9694[1-4](-\d{4})?$/
-    , FO: /^\d{3}$/
-    , FR: /^\d{5}$/
-    , GA: /.*/
+    , FO: threeDigits
+    , FR: fiveDigits
+    , GA: all
     , GB: /^[A-Z]{1,2}\d[A-Z0-9]( \d[A-Z]{2})?$/
-    , GD: /.*/
-    , GE: /^\d{4}$/
+    , GD: all
+    , GE: fourDigits
     , GF: /^973\d{2}$/
-    , GG: /^GY\d{1,2} \d[A-Z]{2}$/
-    , GH: /.*/
+    , GG: jersey
+    , GH: all
     , GI: /^GX11 1AA$/
-    , GL: /^\d{4}$/
-    , GM: /.*/
-    , GN: /^\d{3}$/
+    , GL: fourDigits
+    , GM: all
+    , GN: threeDigits
     , GP: /^971\d{2}$/
-    , GQ: /.*/
-    , GR: /^\d{3} \d{2}$/
-    , GT: /^\d{5}$/
-    , GU: /^\d{5}(-\d{4})?$/
-    , GW: /^\d{4}$/
-    , GY: /.*/
-    , HK: /.*/
+    , GQ: all
+    , GR: threeAndTwoDigits
+    , GT: fiveDigits
+    , GU: americanStyle
+    , GW: fourDigits
+    , GY: all
+    , HK: all
     , HN: /^(HN)?\d{5}$/
-    , HR: /^\d{5}$/
-    , HT: /^\d{4}$/
-    , HU: /^\d{4}$/
-    , ID: /^\d{5}$/
+    , HR: fiveDigits
+    , HT: fourDigits
+    , HU: fourDigits
+    , ID: fiveDigits
     , IE: /^[A-Z]\d(\d|W) [A-Z][A-Z0-9]{3}$/
     , IL: /^\d{7}$/
     , IM: /^IM\d{1,2} \d[A-Z]{2}$/
-    , IN: /^\d{5}$/
-    , IQ: /^\d{5}$/
+    , IN: fiveDigits
+    , IQ: fiveDigits
     , IR: /^\d{10}$/
-    , IS: /^\d{3}$/
-    , IT: /^\d{5}$/
-    , JE: /^GY\d{1,2} \d[A-Z]{2}$/
-    , JM: /^\d{2}$/
-    , JO: /^\d{5}$/
+    , IS: threeDigits
+    , IT: fiveDigits
+    , JE: jersey
+    , JM: twoDigits
+    , JO: fiveDigits
     , JP: /^\d{3}-\d{4}$/
-    , KE: /^\d{5}$/
-    , KG: /^\d{6}$/
-    , KH: /^\d{5}$/
-    , KI: /.*/
-    , KM: /.*/
-    , KN: /.*/
-    , KP: /.*/
-    , KR: /^\d{5}$/
-    , KW: /^\d{5}$/
+    , KE: fiveDigits
+    , KG: sixDigits
+    , KH: fiveDigits
+    , KI: all
+    , KM: all
+    , KN: all
+    , KP: all
+    , KR: fiveDigits
+    , KW: fiveDigits
     , KY: /^KY\d-\d{4}$/
-    , KZ: /^\d{6}$/
-    , LA: /^\d{5}$/
+    , KZ: sixDigits
+    , LA: fiveDigits
     , LB: /^\d{4}( \d{4})?$/
     , LC: /^LC\d{2} \d{3}$/
     , LI: /^94[8-9]\d$/
-    , LK: /^\d{5}$/
-    , LR: /^\d{4}$/
-    , LS: /^\d{3}$/
+    , LK: fiveDigits
+    , LR: fourDigits
+    , LS: threeDigits
     , LT: /^LT-\d{5}$/
-    , LU: /^\d{4}$/
+    , LU: fourDigits
     , LV: /^LV-\d{4}$/
-    , LY: /.*/
-    , MA: /^\d{5}$/
+    , LY: all
+    , MA: fiveDigits
     , MC: /^980\d{2}$/
     , MD: /^MD-?\d{4}$/
-    , ME: /^\d{5}$/
-    , MG: /^\d{3}$/
+    , ME: fiveDigits
+    , MG: threeDigits
     , MH: /^969[6-7]\d(-\d{4})?$/
-    , MK: /^\d{4}$/
-    , ML: /.*/
-    , MM: /^\d{5}$/
-    , MN: /^\d{6}$/
-    , MO: /.*/
+    , MK: fourDigits
+    , ML: all
+    , MM: fiveDigits
+    , MN: sixDigits
+    , MO: all
     , MP: /^9695[0-2](-\d{4})?$/
     , MQ: /^972\d{2}$/
-    , MR: /.*/
+    , MR: all
     , MS: /^MSR 1110-1350$/
     , MT: /^[A-Za-z]{3} \d{4}$/
-    , MU: /^\d{5}$/
-    , MV: /^\d{5}$/
-    , MW: /.*/
-    , MX: /^\d{5}$/
-    , MY: /^\d{5}$/
-    , MZ: /^\d{4}$/
-    , NA: /.*/
+    , MU: fiveDigits
+    , MV: fiveDigits
+    , MW: all
+    , MX: fiveDigits
+    , MY: fiveDigits
+    , MZ: fourDigits
+    , NA: all
     , NC: /^988\d{2}$/
-    , NE: /^\d{4}$/
-    , NG: /^\d{6}$/
+    , NE: fourDigits
+    , NG: sixDigits
     , NL: /^(NL-)?\W*\d{4}\W*[A-Z]$/
-    , NO: /^\d{4}$/
-    , NP: /^\d{5}$/
-    , NR: /.*/
-    , NU: /.*/
-    , NY: /^\d{5}$/
-    , NZ: /^\d{4}$/
-    , OM: /^\d{3}$/
-    , PA: /^\d{4}$/
-    , PE: /^\d{5}$/
+    , NO: fourDigits
+    , NP: fiveDigits
+    , NR: all
+    , NU: all
+    , NY: fiveDigits
+    , NZ: fourDigits
+    , OM: threeDigits
+    , PA: fourDigits
+    , PE: fiveDigits
     , PF: /^987\d{2}$/
-    , PG: /^\d{3}$/
-    , PH: /^\d{4}$/
-    , PK: /^\d{5}$/
+    , PG: threeDigits
+    , PH: fourDigits
+    , PK: fiveDigits
     , PL: /^\d{2}-\d{3}$/
     , PM: /^97500$/
     , PR: /^00[679]\d{2}(-\d{4})?$/
     , PS: /^\d{3}|\d{7}$/
-    , PT: /^\d{4}$/
+    , PT: fourDigits
     , PW: /^96940(-\d{4})?$/
-    , PY: /^\d{4}$/
-    , QA: /.*/
+    , PY: fourDigits
+    , QA: all
     , RE: /^974\d{2}$/
-    , RO: /^\d{6}$/
-    , RS: /^\d{5}$/
-    , RU: /^\d{6}$/
-    , RW: /.*/
-    , SA: /^\d{5}(-\d{4})?$/
-    , SB: /.*/
-    , SC: /.*/
-    , SD: /^\d{5}$/
-    , SE: /^\d{3} \d{2}$/
-    , SG: /^\d{2}$/
+    , RO: sixDigits
+    , RS: fiveDigits
+    , RU: sixDigits
+    , RW: all
+    , SA: americanStyle
+    , SB: all
+    , SC: all
+    , SD: fiveDigits
+    , SE: threeAndTwoDigits
+    , SG: twoDigits
     , SH: /^(STHL)|(ASCN)|(TDCU) 1ZZ$/
     , SI: /^(SI-)?\d{4}$/
-    , SK: /^\d{3} \d{2}$/
-    , SL: /.*/
+    , SK: threeAndTwoDigits
+    , SL: all
     , SM: /^4789\d$/
     , SN: /^(C\.?P\.?\W*)?\d{5}$/
     , SO: /^[A-Z]{2}\W*\d{5}$/
-    , SR: /.*/
-    , SS: /.*/
-    , ST: /.*/
-    , SV: /^\d{4}$/
-    , SX: /.*/
-    , SY: /.*/
+    , SR: all
+    , SS: all
+    , ST: all
+    , SV: fourDigits
+    , SX: all
+    , SY: all
     , SZ: /^[A-Za-z]\d{3}$/
     , TC: /^TKCA 1ZZ$/
-    , TD: /.*/
-    , TG: /.*/
-    , TH: /^\d{5}$/
-    , TJ: /^\d{6}$/
-    , TK: /.*/
-    , TL: /.*/
-    , TM: /^\d{6}$/
-    , TN: /^\d{4}$/
-    , TO: /.*/
-    , TR: /^\d{5}$/
-    , TT: /^\d{6}$/
-    , TV: /.*/
+    , TD: all
+    , TG: all
+    , TH: fiveDigits
+    , TJ: sixDigits
+    , TK: all
+    , TL: all
+    , TM: sixDigits
+    , TN: fourDigits
+    , TO: all
+    , TR: fiveDigits
+    , TT: sixDigits
+    , TV: all
     , TW: /^\d{3}(-\d{2})?$/
-    , TZ: /^\d{5}$/
-    , UA: /^\d{5}$/
-    , UG: /.*/
-    , US: /^\d{5}$/
-    , UY: /^\d{5}$/
-    , UZ: /^\d{6}$/
+    , TZ: fiveDigits
+    , UA: fiveDigits
+    , UG: all
+    , US: fiveDigits
+    , UY: fiveDigits
+    , UZ: sixDigits
     , VA: /^00120$/
     , VC: /^VC\d{4}$/
     , VE: /^\d{4}(-[A-Z])?$/
     , VG: /^VG11[1-6]\d$/
     , VI: /^008\d{2}(-\d{4})?$/
-    , VN: /^\d{6}$/
-    , VU: /.*/
+    , VN: sixDigits
+    , VU: all
     , WF: /^986\d{2}$/
     , WS: /^WS\d{4}$/
-    , YE: /.*/
+    , YE: all
     , YT: /^976\d{2}$/
-    , ZA: /^\d{4}$/
-    , ZM: /^\d{5}$/
-    , ZW: /.*/
+    , ZA: fourDigits
+    , ZM: fiveDigits
+    , ZW: all
 };

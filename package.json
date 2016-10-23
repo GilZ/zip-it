@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js -o zip-it.js && uglifyjs zip-it.js -c \"evaluate=false\" -m --source-map zip-it-min.map -o zip-it-min.js"
+    "build": "browserify index.js --standalone zipit -o zip-it.js && uglifyjs zip-it.js -c \"evaluate=false\" -m --source-map zip-it-min.map -o zip-it-min.js",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "zip",

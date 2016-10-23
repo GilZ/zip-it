@@ -1,15 +1,25 @@
 var regExes = require('./countries');
 
-function verifyCode(country, code) {
-    var regex = getRegexForCountry(country);
-    return regex && regex.test(code);
+function verifyCode(countryCode, postalCode) {
+    var regex = getRegexForCountry(countryCode);
+    return regex && regex.test(postalCode);
 }
 
-function getRegexForCountry(country) {
-    return regExes[country];
+function getRegexForCountry(countryCode) {
+    return regExes[countryCode];
+}
+
+function isCountrySupported(countryCode) {
+    return !!regExes[countryCode];
+}
+
+function supportedCountryCodes() {
+    return Object.keys(regExes);
 }
 
 module.exports = {
     verifyCode: verifyCode,
-    getRegexForCountry: getRegexForCountry
+    getRegexForCountry: getRegexForCountry,
+    isCountrySupported: isCountrySupported,
+    supportedCountryCodes: supportedCountryCodes
 };
