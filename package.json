@@ -1,6 +1,6 @@
 {
   "name": "zip-it",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A small library that helps you to verify postal (zip) codes",
   "main": "index.js",
   "scripts": {
