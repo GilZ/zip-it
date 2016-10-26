@@ -1,0 +1,29 @@
+{
+  "name": "zip-it",
+  "description": "A small library that helps you to verify postal (zip) codes",
+  "main": "zip-it.js",
+  "authors": [
+    "Gil Zieder"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "zip",
+    "zipcode",
+    "zipcodes",
+    "postal",
+    "codes",
+    "zip",
+    "code",
+    "global",
+    "verify",
+    "verification"
+  ],
+  "homepage": "https://github.com/GilZ/zip-it",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

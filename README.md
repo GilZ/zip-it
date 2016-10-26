@@ -15,12 +15,12 @@ const zipit = require('zip-it')
 
 ####As a bower component:
 ```bash
-bower install zap-it --save
+bower install zip-it --save
 ```
 
 And in your page:
 ```html
-<script src="bower_components/zip-it/zip-it.min.js"></script>
+<script src="bower_components/zip-it/zip-it.min.js"></script> <!-- of course, you can use zip-it.js if you want to -->
 ```
 
 ## Simple usage
@@ -46,7 +46,7 @@ Returns `true` if `postalCode` is a valid postal code in the country, `false` if
 
 ####Arguments
 1. `countryCode` (_String_) – a two capital letters string, representing the relevant country according to [iso 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)
-2. `postalCode` (_String|Number_) – the postal code to verify
+2. `postalCode` (_String_|_Number_) – the postal code to verify
 
 ----
 
@@ -72,5 +72,8 @@ Return all supported country codes
 zipit.getRegexForCountry(countryCode)
 ```
 Returns the regular expression used for that country. Can be useful in a `pattern` attribute of an `<input>` tag
+
+####Arguments
+1. `countryCode` (_String_) – a two capital letters string, representing the relevant country according to [iso 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)
 
 
