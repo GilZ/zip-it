@@ -40,6 +40,7 @@ console.log(zipit.verifyCode('AA', 'Not a valid country code'));
 zipit.verifyCode(countryCode, postalCode)
 ```
 Returns `true` if `postalCode` is a valid postal code in the country, `false` if it's invalid or `undefined` if `countryCode` is not a valid country code
+
 ####Notes:
 * The verification is not done on the exact address, but verifies `postalCode` adheres to the format of the postal code in the given country.
 * Many countries (66 to be exact) don't have a postal code of any sort. In that case, any value of `postalCode` will return `true`.
